@@ -1,0 +1,29 @@
+﻿
+
+@model VRSystem.Models.Subscriptions;
+@{
+    var video = (Videos)ViewData["video"];
+}
+
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://localhost:44332/@video.VideoPath" allowfullscreen></iframe>
+</div>
+
+
+<div>
+    
+    
+
+
+    <div>
+        <lable asp-for="Title"><h2>@video.Title</h2></lable>
+    </div>
+    <div>
+        <p>@video.Desc.</p>
+    </div>
+    <div>
+        <h2>@video.Price </h2>
+    </div>
+
+</div>

@@ -1,0 +1,32 @@
+﻿@model VRSystem.Models.Subscriptions;
+@{
+    var video = (Videos)ViewData["video"];
+}
+
+<div>
+
+    <img style="height:200px" src="https://localhost:44332/@video.ImagePath">
+
+
+    <div>
+        <lable asp-for="Title"><h2>@video.Title</h2></lable>
+    </div>
+    <div>
+        <p>@video.Desc.</p>
+    </div>
+    <div>
+        <h2>$@video.Price per month</h2>
+    </div>
+
+</div>
+
+    <form method="post" asp-action="Index">
+
+        <input type="number" asp-for="Vid" hidden  value="@video.ID" />
+        <input type="checkbox" asp-for="IsActive"  hidden  default="True"/>
+        <input type="submit" class="btn btn-primary" value="Go" />
+        
+    </form>
+
+
+

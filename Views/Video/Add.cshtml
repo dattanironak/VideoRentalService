@@ -1,0 +1,95 @@
+﻿@model VRSystem.Models.Videos
+
+<form enctype="multipart/form-data" method="post" asp-action="Add">
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Add Video</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="col-6">
+                    Video Title
+                </div>
+                <div class="col-6">
+                    <input type="text" required asp-for="Title" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="col-6">
+                    Description
+                </div>
+                <div class="col-6">
+                    <input type="text" asp-for="Desc" required class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="col-6">
+                    Lengh (in Mins i.e. 5 mins,11 mins)
+                </div>
+                <div class="col-6">
+                    <input type="number" asp-for="Time" required class="form-control" />
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="col-6">
+                    Price per month
+                </div>
+                <div class="col-6">
+                    <input type="number" asp-for="Price" required class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="col-6">
+                    Available  <input type="checkbox" asp-for="Available" required class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="col-6">
+                    <label>Choose Image for Thumbnail</label>
+                </div>
+                <div class="col-6">
+                    <input type="file" class="form-control" name="ImageFile" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="col-6">
+                    <label>Choose Video File</label>
+                </div>
+                <div class="col-6">
+                    <input type="file" class="form-control" name="VideoFile" />
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-12">
+                <div class="col-6">
+                    <input type="submit" class="btn btn-primary w-75" value="Add" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>
